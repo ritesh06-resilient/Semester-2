@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script src="./script.js">
+        console.log("Start");
+        
+        setTimeout(()=>{
+            console.log("firstntime out(1s)")
+
+            setTimeout(()=>{
+            Console.log(" Inner timeout(0.5s)");
+        },500);
+        }, 1000);
+
+
+         setTimeout(()=>{
+            console.log(" Second timeout(0.5s)");
+         },0);
+
+         function runtask(){
+            console.log("Inside runtask");
+
+            setTimeout(()=>{
+            Console.log(" timeout inside runtask(0.5s)");
+         },300);
+
+         function innertask(){
+            console.log("Inside inner task")
+         }
+          
+         innertask();
+         }
+         runtask();
+        
+
+    </script>
+
+    
+</body>
+</html>

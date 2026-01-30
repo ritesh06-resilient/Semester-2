@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="./script.js">
+        let n = prompt("Enter the price");
+        let ans = function pricecalculation(n) {
+            let priceafterdiscount = n - (n * 0.1);
+            let priceaftergst = priceafterdiscount + (priceafterdiscount * 0.18);
+            console.log(priceaftergst);
+        }
+
+        ans(n);
+
+        //by arrow function
+        let ans2 = (n) => {
+            let priceafterdiscount = n - (n * 0.1);
+            let priceaftergst = priceafterdiscount + (priceafterdiscount * 0.18);
+            console.log(priceaftergst);
+        }
+        ans2(n);
+        //by function expression
+        let ans3 = function (n) {
+            let priceafterdiscount = n - (n * 0.1);
+            let priceaftergst = priceafterdiscount + (priceafterdiscount * 0.18);
+            console.log(priceaftergst);
+        }
+        ans3(n);  
+        //by immediately invoked function expression    
+        (function (n) {
+            let priceafterdiscount = n - (n * 0.1);
+            let priceaftergst = priceafterdiscount + (priceafterdiscount * 0.18);
+            console.log(priceaftergst);
+        })(n);  
+
+
+        //by arrow function
+        let ans4 = (n) => {
+            let priceafterdiscount = n - (n * 0.1);
+            let priceaftergst = priceafterdiscount + (priceafterdiscount * 0.18);
+            console.log(priceaftergst);
+        }
+        ans4(n);
+        
+
+
+
+    </script>
+
+</body>
+
+</html>
